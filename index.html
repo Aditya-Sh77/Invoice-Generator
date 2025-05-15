@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Dynamic Invoice Generator</h2>
+  <div class="container">
+    <div class="form-section">
+      <h3>Invoice Details</h3>
+      <!-- BEGIN: Buyer Auto-Suggestion -->
+      <!-- This section allows the user to select a saved buyer name from a dropdown list -->
+      <label for="buyerName">Buyer Name</label>
+      <input list="buyerSuggestions" id="buyerName" name="buyerName">
+      <datalist id="buyerSuggestions"></datalist>
+      <!-- END: Buyer Auto-Suggestion -->
+
+
+      <!-- Address of the buyer -->
+      <label>Address</label>
+      <textarea id="buyerAddress"></textarea>
+
+      <!-- GSTIN of the buyer -->
+      <label>Buyer GSTIN</label>
+      <input type="text" id="buyerGST">
+
+      <!-- Invoice number -->
+      <label>Invoice No</label>
+      <input type="text" id="invoiceNo">
+
+      <!-- Invoice date -->
+      <label>Date</label>
+      <input type="date" id="invoiceDate">
+
+      <!-- PO number -->
+      <label>PO Number</label>
+      <input type="text" id="poNo">
+
+      <!-- PO date -->
+      <label>PO Date</label>
+      <input type="date" id="poDate">
+
+      <h4>Product Entry</h4>
+      <!-- Section for adding products -->
+      <div id="items"></div>
+      <button onclick="addItem()">Add Item</button>
+
+      <!-- Tax type -->
+      <label>Tax Type</label>
+      <select id="taxType">
+        <option value="IGST">IGST (12%)</option>
+        <option value="SGST">SGST/CGST (9% each)</option>
+      </select>
+
+      <!-- Transporter details -->
+      <section>
+        <h3>Transporter Details</h2>
+        <label>Transporter Name</label>
+        <input type="text" id="transportName">
+        <label>Transporter ID</label>
+        <input type="text" id="transportID">
+        <label>Vehicle No.</label>
+        <input type="text" id="vehicleNo">
+      </section>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id = "generateInvoice">Generate Invoice</button>
+      </div>
+    </div>
+
+    <!-- Invoice preview section -->
+    <div class="invoice-box" id="invoicePreview">
+      <!-- Invoice Preview Will Be Injected Here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

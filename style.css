@@ -1,0 +1,149 @@
+/* Styles for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+/* Styles for the title */
+h2 {
+    text-align: center;
+}
+
+/* Styles for the company name */
+#invoiceTitle{
+    font-size: larger;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Styles for the company address */
+#company{
+  font-size: larger;
+}
+
+/* Styles for the container which holds the form and the invoice preview */
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Styles for the form section */
+.form-section, .invoice-box {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Styles for the form labels */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Styles for the form inputs */
+input, textarea, select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* Styles for the invoice table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Styles for the customer section */
+#customer{
+    display: flex;
+}
+
+/* Styles for the buyer section */
+#buyer {
+    padding: 10px 10px 15px 15px;
+    text-align: left;
+    width: 50%;
+    border: #000 solid 1px;
+}
+
+/* Styles for the buyer GSTIN */
+#buyerGST{
+  text-transform: uppercase;
+  border: #000 solid 1px;
+  padding: 5px 5px 2px 2px;
+  text-align: left;
+}
+
+/* Styles for the invoice details section */
+#invR {
+    margin-left: 7px;
+    padding: 10px 10px 15px 15px;
+    text-align: left;
+    width: 45%;
+    border: #000 solid 1px;
+}
+
+/* Styles for the invoice table headers and cells */
+th, td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Styles for the actions section */
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styles for the buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Styles for the right aligned text */
+.right { text-align: right; }
+
+/* Styles for the bold text */
+.bold { font-weight: bold; }
+
+/* Styles for the remove button */
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Styles for the transporter section */
+.transporter{
+    padding: 10px;
+    border: #000 solid 1px;
+}
+
+/* Styles for the terms and conditions section */
+#terms{
+    padding: 10px;
+    border: #000 solid 1px;
+}
+
+/* Styles for the bank details section */
+#bank{
+    padding: 10px;
+    border: #000 solid 1px;
+}
+
+/* Styles for the signature section */
+#sign{
+    text-align:right; 
+    margin-top:50px;
+}
