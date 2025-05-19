@@ -163,15 +163,15 @@ function generateInvoice() {
 }
 
 // Function to print the invoice
-function printInvoice() {
-  const invoice = document.getElementById('invoicePreview').innerHTML;
-  const printWindow = window.open('', '', 'width=800,height=900');
-  printWindow.document.write('<html><head><title>Invoice</title></head><body>');
-  printWindow.document.write(invoice);
-  printWindow.document.write('</body></html>');
-  printWindow.document.close();
-  printWindow.print();
-}
+// function printInvoice() {
+//   const invoice = document.getElementById('invoicePreview').innerHTML;
+//   const printWindow = window.open('', '', 'width=800,height=900');
+//   printWindow.document.write('<html><head><title>Invoice</title></head><body>');
+//   printWindow.document.write(invoice);
+//   printWindow.document.write('</body></html>');
+//   printWindow.document.close();
+//   printWindow.print();
+// }
 
 // Function to convert numbers to words
 function numberToWords(num) {
