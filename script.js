@@ -43,6 +43,7 @@ function generateInvoice() {
   // Gather buyer and invoice details
   const buyerName = document.getElementById('buyerName').value;
   const buyerAddress = document.getElementById('buyerAddress').value;
+  const shippingAddress = document.getElementById('shippingAddress').value;
   const invoiceNo = document.getElementById('invoiceNo').value;
   const invoiceDate = document.getElementById('invoiceDate').value;
   const poNo = document.getElementById('poNo').value;
@@ -121,7 +122,7 @@ function generateInvoice() {
       </p>
       <p>Phone: +91 9818522978, Email: saibelting35@gmail.com</p>
       <section id="customer">
-      <p id= "buyer"><strong>M/S: </strong> ${buyerName}<br>${buyerAddress}<br><strong>GSTIN:</strong> ${buyerGSTIN}</p>
+      <p id= "buyer"><strong>M/S: </strong> ${buyerName}<br><strong>Billing Address: </strong>${buyerAddress}<br><strong>Shipping Address: </strong>${shippingAddress}<br><strong>GSTIN:</strong> ${buyerGSTIN}</p>
       <p id="invR"><strong>Invoice No:</strong> ${invoiceNo} <br> <strong>Invoice Date:</strong> ${invoiceDate}<br>
          <strong>PO No:</strong> ${poNo} <br> <strong>PO Date:</strong> ${poDate}</p>
       </section>   
