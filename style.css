@@ -74,9 +74,10 @@ table {
 
 /* Styles for the buyer GSTIN */
 #buyerGST{
+
   text-transform: uppercase;
   border: #000 solid 1px;
-  padding: 5px 5px 2px 2px;
+  padding: 5px 5px 10px 2px;
   text-align: left;
 }
 
