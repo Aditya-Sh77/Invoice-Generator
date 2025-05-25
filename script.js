@@ -8,6 +8,10 @@ document.getElementById("generateInvoice").addEventListener("click", () => {
   generateInvoice();
 });
 
+document.getElementById("addItem").addEventListener("click", () => {
+  // Add a new item entry
+  addItem();
+})
 // Function to add a new item entry
 function addItem() {
   itemCount++;
@@ -115,12 +119,11 @@ function generateInvoice() {
   const html = `
     <div id="invoice">
       <h3 id="invoiceTitle">Tax Invoice</h3>
-      <p id="company"><strong> SAI BELTING </strong><br>
-      G-58, Site - B, UPSIDC Industrial Area, <br>
+      <p id="company"><strong> SAI BELTING </strong></p>
+      <p id = "address">G-58, Site - B, UPSIDC Industrial Area, <br>
       Surajpur, Greater Noida (U.P.) - 201306 <br>
-      <br>
       </p>
-      <p>Phone: +91 9818522978, Email: saibelting35@gmail.com</p>
+      <p id = "contact">Phone: +91-9818522978, Email: saibelting35@gmail.com</p>
       <section id="customer">
       <p id= "buyer"><strong>M/S: </strong> ${buyerName}<br><strong>Billing Address: </strong>${buyerAddress}<br><strong>Shipping Address: </strong>${shippingAddress}<br><strong>GSTIN:</strong> ${buyerGSTIN}</p>
       <p id="invR"><strong>Invoice No:</strong> ${invoiceNo} <br> <strong>Invoice Date:</strong> ${invoiceDate}<br>

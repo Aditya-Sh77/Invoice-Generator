@@ -11,9 +11,14 @@ h2 {
     text-align: center;
 }
 
+#invoice{
+    border: #000 solid 1px;
+    margin: 20px;
+    padding: 10px;
+}
 /* Styles for the company name */
 #invoiceTitle{
-    font-size: larger;
+    margin-top: 10px;
     align-items: center;
     text-align: center;
     font-weight: 700;
@@ -21,7 +26,19 @@ h2 {
 
 /* Styles for the company address */
 #company{
-  font-size: larger;
+  font-size: 1.5rem;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+}
+#address{
+  align-items: center;
+  text-align: center;
+}
+#contact{
+  font-size: smaller;
+  align-items: center;
+  text-align: center;
 }
 
 /* Styles for the container which holds the form and the invoice preview */
