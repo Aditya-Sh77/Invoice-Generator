@@ -1,6 +1,5 @@
 # Invoice-Generator
 
-# 🧾 Dynamic Invoice Generator
 
 A web-based application for generating professional GST invoices dynamically. Built using **HTML**, **CSS**, and **JavaScript**, this tool allows users to input buyer and product details, automatically calculates taxes, and renders a print-ready invoice.
 
