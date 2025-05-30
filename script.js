@@ -12,6 +12,10 @@ document.getElementById("addItem").addEventListener("click", () => {
   // Add a new item entry
   addItem();
 })
+
+document.getElementById("printInvoice").addEventListener("click", () => {
+  printInvoice();
+})
 // Function to add a new item entry
 function addItem() {
   itemCount++;
@@ -166,15 +170,90 @@ function generateInvoice() {
 }
 
 // Function to print the invoice
-// function printInvoice() {
-//   const invoice = document.getElementById('invoicePreview').innerHTML;
-//   const printWindow = window.open('', '', 'width=800,height=900');
-//   printWindow.document.write('<html><head><title>Invoice</title></head><body>');
-//   printWindow.document.write(invoice);
-//   printWindow.document.write('</body></html>');
-//   printWindow.document.close();
-//   printWindow.print();
-// }
+function printInvoice() {
+  const invoiceHTML = document.getElementById('invoicePreview').innerHTML;
+
+  const printWindow = window.open('', '', 'width=1000,height=800');
+  printWindow.document.open();
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Print Invoice</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: white;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+          th, td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: left;
+          }
+          #invoice {
+            border: 1px solid #000;
+            margin: 20px;
+            padding: 10px;
+          }
+          #invoiceTitle, #company, #address, #contact {
+            text-align: center;
+          }
+          #company {
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+          #customer {
+            display: flex;
+          }
+          #buyer, #invR, #terms, #bank, .transporter {
+            border: 1px solid #000;
+            padding: 10px;
+          }
+          #buyer {
+            width: 50%;
+          }
+          #invR {
+            width: 45%;
+            margin-left: 5%;
+          }
+          .transporter, #terms, #bank {
+            margin-top: 10px;
+          }
+          #sign {
+            text-align: right;
+            margin-top: 50px;
+          }
+          .right {
+            text-align: right;
+          }
+          .bold {
+            font-weight: bold;
+          }
+        </style>
+      </head>
+      <body>
+        ${invoiceHTML}
+        <script>
+          window.onload = function() {
+            window.focus();
+            window.print();
+            window.onafterprint = function() {
+              window.close();
+            };
+          };
+        <\/script>
+      </body>
+    </html>
+  `);
+  printWindow.document.close();
+}
+
+
 
 // Function to convert numbers to words
 function numberToWords(num) {
