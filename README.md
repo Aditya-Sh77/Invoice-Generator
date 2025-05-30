@@ -13,7 +13,7 @@ A web-based application for generating professional GST invoices dynamically. Bu
 * Save buyer details locally and auto-fill on future use
 * Supports transport and vehicle info
 * Generates styled printable invoice in-browser
-
+* Added Print functionality to print the generated invoice.
 
 ---
 
@@ -59,7 +59,7 @@ A web-based application for generating professional GST invoices dynamically. Bu
 
 4. Click **Generate Invoice** to view the formatted invoice.
 
-5. You can right-click to print or export as PDF.
+5. You can click **Print Invoice** to print or export as PDF.
 
 ---
 
@@ -72,8 +72,7 @@ A web-based application for generating professional GST invoices dynamically. Bu
 
 ## 📌 To-Do / Improvements
 
-* [ ] Add download as PDF support
-* [ ] Print button integration
+
 * [ ] Export and import buyer/product data
 * [ ] Mobile-friendly optimizations
 
